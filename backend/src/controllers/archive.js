@@ -43,7 +43,7 @@ module.exports = {
         document.body.removeChild(document.querySelector("body > center"));
         return document.querySelector("body").innerHTML;
       });
-      newHTML = htmlString.replaceAll('src="/', `src="https://archive.md/`);
+      newHTML = htmlString.replace(/src="\//g, `src="https://archive.md/`);
 
       console.log(typeof newHTML);
       res.json({ html: newHTML });

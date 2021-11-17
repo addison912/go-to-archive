@@ -19,13 +19,14 @@ const getArchive = async () => {
 
 getArchive().then(async (content) => {
   // console.log(content);
-  document.getElementById("archive_root").innerHTML = content;
-  //   let contentWrapper = document.createElement("div");
-  //   contentWrapper.setAttribute("id", "arch_content_wrapper");
-  //   contentWrapper.innerHTML = content;
+  // document.getElementById("archive_root").innerHTML = content;
+  let contentWrapper = document.createElement("div");
+  contentWrapper.setAttribute("id", "arch_content_wrapper");
+  contentWrapper.innerHTML = content;
 
-  //   document
-  //     .getElementById("archive_root")
-  //     .removeChild(document.querySelector(".loading_spinner"))
-  //     .appendChild(contentWrapper);
+  document
+    .getElementById("archive_root")
+    .remove(document.querySelector(".loading_spinner"));
+
+  document.getElementById("archive_root").appendChild(contentWrapper);
 });
