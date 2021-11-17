@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+#archive_root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading_spinner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading_spinner > img {
+  width: 200px;
+  height: 200px;
+}

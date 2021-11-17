@@ -1,0 +1,22 @@
+{
+  "name": "Go To Archive",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "scripting"
+  ],
+  "icons": {
+    "16": "images/icon-bitty.png",
+    "48": "images/icon-small.png",
+    "96": "images/icon-medium.png",
+    "128": "images/icon-large.png"
+  }
+}
