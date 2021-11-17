@@ -6,4 +6,4 @@ let meta = document.createElement("meta");
 meta.setAttribute("name", "referrer");
 meta.setAttribute("content", "always");
 document.head.appendChild(meta);
-window.location.href = "http://localhost:3000/arch";
+window.location.href = "http://archive.tidepooltech.net/arch";
