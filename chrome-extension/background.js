@@ -15,8 +15,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
   //   });
   //   console.log(info);
   chrome.scripting.executeScript({
-    target: { tabId: tab.id, allFrames: true },
+    target: { tabId: tab.id, allFrames: false },
     files: ["contentscript.js"],
-    // code: "console.log(`hello`)",
   });
 });

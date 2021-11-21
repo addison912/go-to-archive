@@ -4,6 +4,7 @@
 
 body {
   margin: 0px;
+  transform: translateZ(0);
 }
 
 #archive_root {
@@ -22,4 +23,11 @@ body {
 .loading_spinner > img {
   width: 200px;
   height: 200px;
+}
+
+#arch_content_wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

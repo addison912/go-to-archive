@@ -1,7 +1,8 @@
 let main = document.createElement("div");
 document.getElementById("archive_root").appendChild(main);
 
-console.log(document.referrer);
+referrer = document.referrer.replace(/\?.*/, "");
+console.log(referrer);
 
 const getArchive = async () => {
   return fetch("/api/arch/get", {
@@ -9,7 +10,7 @@ const getArchive = async () => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ referer: document.referrer }),
+    body: JSON.stringify({ referer: referrer }),
   })
     .then((res) => res.json())
     .then((data) => {
@@ -23,10 +24,8 @@ getArchive().then(async (content) => {
   let contentWrapper = document.createElement("div");
   contentWrapper.setAttribute("id", "arch_content_wrapper");
   contentWrapper.innerHTML = content;
-
-  document
-    .getElementById("archive_root")
-    .remove(document.querySelector(".loading_spinner"));
+  let spinner = document.querySelector(".loading_spinner");
+  spinner ? spinner.remove() : null;
 
   document.getElementById("archive_root").appendChild(contentWrapper);
 });

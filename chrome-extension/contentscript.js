@@ -6,5 +6,10 @@ let meta = document.createElement("meta");
 meta.setAttribute("name", "referrer");
 meta.setAttribute("content", "always");
 document.head.appendChild(meta);
-// window.location.href = "http://archive.tidepooltech.net/arch";
-window.location.href = "http://localhost:3456/arch";
+window.location = "http://archive.tidepooltech.net/arch";
+function onload() {
+  console.log("here");
+  window.addEventListener("load", (event) => {
+    console.log("page is fully loaded");
+  });
+}
